@@ -10,11 +10,18 @@
  */
 public class Container {
     private int amount;
+	private String name;
     
-    public Container() {
+    public Container(String name) {
         this.amount = 0;
+		this.name = name;
     }
     
+	// Returns name of the container
+	public String getContainerName() {
+		return this.name;
+	}
+
     // Returns the amount that the container currently holds
     public int contains() {
         return this.amount;
@@ -49,6 +56,6 @@ public class Container {
     
     @Override
     public String toString() {
-        return amount + "/100";
+        return this.name + ": " + amount + "/100";
     }
 }

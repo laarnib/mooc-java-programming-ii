@@ -18,8 +18,8 @@ public class UserInterface {
     
     public UserInterface(Scanner scanner) {
         this.scanner = scanner;
-        this.firstContainer = new Container();
-        this.secondContainer = new Container();
+        this.firstContainer = new Container("First");
+        this.secondContainer = new Container("Second");
     }
     
     // Starts the program
@@ -64,8 +64,8 @@ public class UserInterface {
     // Print the containers current contents
     public void printContainerContents() {
         System.out.println("");
-        System.out.println("First: " + firstContainer);
-        System.out.println("Second: " + secondContainer);
+        System.out.println(firstContainer);
+        System.out.println(secondContainer);
     }
     
     // Executes the add, move and remove commands. All other commands are invalid.
